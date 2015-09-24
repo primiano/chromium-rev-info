@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome rev-info",
+  "version": "0.1.2",
+  "author": "Primiano Tucci",
+  "description": "Overlays tootips with revisision info for chrome SHA1s",
+  "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions":
+  [
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
