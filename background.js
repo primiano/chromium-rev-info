@@ -52,7 +52,7 @@ function getCommitPosition(sha1, sendResponse) {
       g_branches.forEach(function(branch_config) {
         descr += '\n  ' + branch_config.os + ': ';
         branch_config.versions.forEach(function(branch_descr) {
-          if (pos < Number.parseInt(branch_descr.branch_base_position)) {
+          if (pos <= Number.parseInt(branch_descr.branch_base_position)) {
             descr += ' ' + branch_descr.channel + '(' + branch_descr.version + ')';
           }
         });
