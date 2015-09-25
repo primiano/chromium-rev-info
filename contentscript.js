@@ -3,7 +3,7 @@ function insertTooltips (domNode) {
         var children = domNode.childNodes;
         for (var i=0; i<children.length; i++) {
             var child = children[i];
-            if (child.className == 'tooltip_parsed')
+            if (child.className == 'cr_revinfo_tooltip_parsed')
               continue;
             insertTooltips(child);
         }
@@ -18,7 +18,7 @@ function insertTooltips (domNode) {
             mid.parentNode.insertBefore(span,mid);
             mid.parentNode.removeChild(mid);
             span.appendChild(mid);
-            span.className = 'tooltip_parsed';
+            span.className = 'cr_revinfo_tooltip_parsed';
             getCommitPosition(match[0], span);
             text = domNode.Value;
         }
@@ -28,8 +28,8 @@ function insertTooltips (domNode) {
 function getCommitPosition(sha1, node) {
   chrome.runtime.sendMessage({type: "getCommitPosition", sha1: sha1}, function(response) {
     if (response && response.length > 0) {
-      node.className = 'tooltip';
-      node.dataset['tooltip'] = response;
+      node.className = 'cr_revinfo_tooltip';
+      node.dataset['cr_revinfo_tooltip'] = response;
     }
   });
 }
