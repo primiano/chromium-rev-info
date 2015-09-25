@@ -43,7 +43,7 @@
   z-index: 1000;
   padding: 8px;
   width: 500px;
-  margin-left: -360px;
+  margin-left: -100px;
   background-color: #000;
   background-color: hsla(0, 0%, 20%, 0.9);
   color: #fff;
@@ -52,5 +52,6 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 1.2;
+  text-align: left;
   white-space: pre;
 }
